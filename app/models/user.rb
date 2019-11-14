@@ -1,7 +1,7 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token, :activation_token
   before_save { email.downcase! }
   before_create :create_activation_digest
-  attr_accessor :remember_token, :activation_token
   validates :name, presence: true, length: {maximum: 50}
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 
@@ -14,8 +14,6 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   # has_secure_password automatically adds an authenticate method to the corresponding model objects.
-  has_secure_password
-
   #1. The ability to save a securely hashed password_digest attribute to the database
   #2. A pair of virtual attributes (password and password_confirmation), including presence validations upon object creation and a validation requiring that they match
   #3. An authenticate method that returns the user when the password is correct (and false otherwise)
