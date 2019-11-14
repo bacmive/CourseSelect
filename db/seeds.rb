@@ -47,7 +47,9 @@ User.create(
     department: "计算机与控制学院",
     password: "password",
     password_confirmation: "password",
-    admin: true
+    admin: true,
+    activated: true,
+    activated_at: Time.zone.now
 )
 
 teacher_map={
@@ -153,7 +155,7 @@ end
   student=User.create!(
       name: StudentGenerator.name,
       email: "student#{index}@test.com",
-      num: "2016#{Faker::Number.number(11)}",
+      num: "2016#{Faker::Number.number(digits: 11)}",
       major: StudentGenerator.major,
       department: StudentGenerator.department,
       password: "password",
