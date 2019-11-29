@@ -1,0 +1,58 @@
+<% provide(:title, @course.name) %>
+<div class="table-responsive">
+	<table class="table">
+		<caption><%= @course.name %></caption>
+		<thead>
+			<tr>
+				<th>课程信息</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>课程代码</td>
+				<td><%= @course.course_code %></td>
+			</tr>
+			<tr>
+				<td>课程类型</td>
+				<td><%= @course.course_type %></td>
+			</tr>
+			<tr>
+				<td>上课方式</td>
+				<td><%= @course.teaching_type %></td>
+			</tr>
+			<tr>
+				<td>考核类型</td>
+				<td><%= @course.exam_type %></td>
+			</tr>
+			<tr>
+				<td>学分</td>
+				<td><%= @course.credit %></td>
+			</tr>
+			<tr>
+				<td>限选人数</td>
+				<td><%= @course.limit_num %></td>
+			</tr>
+			<tr>
+				<td>学生人数</td>
+				<td><%= @course.student_num %></td>
+			</tr>
+			<tr>
+				<td>上课地点</td>
+				<td><%= @course.class_room %></td>
+			</tr>
+			<tr>
+				<td>上课时间</td>
+				<td><%= @course.course_time %></td>
+			</tr>
+			<tr>
+				<td>上课周数</td>
+				<td><%= @course.course_week %></td>
+			</tr>
+			<tr>
+				<td>授课教师</td>
+				<td><%= User.find_by(id:@course.teacher_id).name %></td>
+			</tr>
+		</tbody>
+</table>
+</div>

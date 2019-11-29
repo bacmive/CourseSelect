@@ -1,0 +1,20 @@
+<% provide(:title, "成绩查询") %>
+<div class="table-responsive">
+	<table class="table">
+    <caption><%= User.find_by_id(@grade.user_id).name%> </caption>
+		<tbody>
+			<tr>
+				<td>课程名称</td>
+				<td><%= Course.find_by(id:@grade.course_id).name %></td>
+			</tr>
+			<tr>
+				<td>授课教师</td>
+				<td><%= User.find_by_id(Course.find_by(id:@grade.course_id).teacher_id).name %></td>
+			</tr>
+			<tr>
+				<td>最终成绩</td>
+				<td><%= @grade.grade %></td>
+			</tr>
+		</tbody>
+</table>
+</div>

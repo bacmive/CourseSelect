@@ -10,6 +10,11 @@ class CoursesController < ApplicationController
     @course=Course.new
   end
 
+  def show
+    @course = Course.find(params[:id])
+    #redirect_to root_url and return unless @user.activated
+  end
+
   def create
     @course = Course.new(course_params)
     if @course.save

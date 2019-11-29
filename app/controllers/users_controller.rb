@@ -2,6 +2,11 @@ class UsersController < ApplicationController
   before_action :logged_in, only: :update
   before_action :correct_user, only: [:update, :destroy]
 
+  def show
+    @user = User.find(params[:id])
+    #redirect_to root_url and return unless @user.activated
+  end
+
   def new
     @user=User.new
   end

@@ -2,6 +2,10 @@ class GradesController < ApplicationController
 
   before_action :teacher_logged_in, only: [:update]
 
+  def show
+    @grade = Grade.find_by_id(params[:id])
+  end
+
   def update
     @grade=Grade.find_by_id(params[:id])
     if @grade.update_attributes!(:grade => params[:grade][:grade])
