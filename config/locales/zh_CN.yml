@@ -14,3 +14,156 @@ zh-CN:
         zero: "暂无%{model}记录"
     page_gap: "…"
     previous_label: "上一页"
+
+  admin:
+    js:
+      true: True
+      false: False
+      is_present: Is present
+      is_blank: Is blank
+      date: Date ...
+      between_and_: Between ... and ...
+      today: Today
+      yesterday: Yesterday
+      this_week: This week
+      last_week: Last week
+      number: Number ...
+      contains: Contains
+      is_exactly: Is exactly
+      starts_with: Starts with
+      ends_with: Ends with
+      too_many_objects: "Too many objects, use search box above"
+      no_objects: "No objects found"
+    loading: "Loading..."
+    toggle_navigation: Toggle navigation
+    home:
+      name: "Home"
+    pagination:
+      previous: "&laquo; 上一页"
+      next: "下一页 &raquo;"
+      truncate: "…"
+    misc:
+      search: "搜索"
+      filter: "过滤"
+      refresh: "刷新"
+      show_all: "查看全部"
+      add_filter: "增加过滤规则"
+      bulk_menu_title: "已选项"
+      remove: "移除"
+      add_new: "创建"
+      chosen: "已选 %{name}"
+      chose_all: "选择全部"
+      clear_all: "清楚全部"
+      up: "向上"
+      down: "向下"
+      navigation: "导航"
+      root_navigation: "动作"
+      navigation_static_label: "链接"
+      log_out: "退出"
+      time_ago: "%{time} 以前"
+      ago: "以前"
+      more: "更多 %{count} more %{models_name}"
+    flash:
+      successful: "%{name} 成功 %{action}"
+      error: "%{name} %{action} 失败"
+      noaction: "没有任何动作"
+      model_not_found: "没有找到'%{model}'"
+      object_not_found: "ID为'%{id}'的%{model}没有找到 "
+    table_headers:
+      model_name: "模型名称"
+      last_created: "最近创建"
+      records: "记录"
+      username: "用户"
+      changes: "改动"
+      created_at: "时间/日期"
+      item: "项目"
+      message: "信息"
+    actions:
+      dashboard:
+        title: "站点管理"
+        menu: "仪表盘"
+        breadcrumb: "仪表盘"
+      index:
+        title: "%{model_label_plural}列表"
+        menu: "列表"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "%{model_label} '%{object_label}'详情"
+        menu: "查看"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "在网页中打开"
+      new:
+        title: "新建 %{model_label}"
+        menu: "创建"
+        breadcrumb: "新建"
+        link: "创建一个新的%{model_label}"
+        done: "已创建"
+      edit:
+        title: "修改%{model_label} '%{object_label}'"
+        menu: "修改"
+        breadcrumb: "修改"
+        link: "修改这个%{model_label}"
+        done: "已更新"
+      delete:
+        title: "删除 %{model_label} '%{object_label}'"
+        menu: "删除"
+        breadcrumb: "删除"
+        link: "删除 '%{object_label}'"
+        done: "已删除"
+      bulk_delete:
+        title: "删除 %{model_label_plural}"
+        menu: "删除多项"
+        breadcrumb: "删除多项"
+        bulk_link: "删除已选%{model_label_plural}"
+      export:
+        title: "导出 %{model_label_plural}"
+        menu: "导出"
+        breadcrumb: "导出"
+        link: "导出已找到的 %{model_label_plural}"
+        bulk_link: "导出已选择的 %{model_label_plural}"
+        done: "已导出"
+      history_index:
+        title: "%{model_label_plural}历史"
+        menu: "历史"
+        breadcrumb: "历史"
+      history_show:
+        title: "%{model_label} '%{object_label}'历史"
+        menu: "历史"
+        breadcrumb: "历史"
+    form:
+      cancel: "取消"
+      basic_info: "基本信息"
+      required: "必需"
+      optional: "可选"
+      one_char: "字符"
+      char_length_up_to: "最长为"
+      char_length_of: "长度"
+      save: "保存"
+      save_and_add_another: "保存，继续添加"
+      save_and_edit: "保存，继续编辑"
+      all_of_the_following_related_items_will_be_deleted: "? 下列相关项可能被删除和丢弃:"
+      are_you_sure_you_want_to_delete_the_object: "确定删除吗 %{model_name}"
+      confirmation: "确定"
+      bulk_delete: "下列项目将被删除，有可能删除或丢弃一些其他依赖信息:"
+      new_model: "%{name} (新建)"
+    export:
+      confirmation: "Export to %{name}"
+      select: "Select fields to export"
+      select_all_fields: "Select All Fields"
+      fields_from: "Fields from %{name}"
+      fields_from_associated: "Fields from associated %{name}"
+      display: "Display %{name}: %{type}"
+      options_for: "Options for %{name}"
+      empty_value_for_associated_objects: "<empty>"
+      click_to_reverse_selection: 'Click to reverse selection'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "Encode to"
+        encoding_to_help: "Choose output encoding. Leave empty to let current input encoding untouched: (%{name})"
+        skip_header: "No header"
+        skip_header_help: "Do not output a header (no fields description)"
+        default_col_sep: ","
+        col_sep: "Column separator"
+        col_sep_help: "Leave blank for default ('%{value}')" # value is default_col_sep
