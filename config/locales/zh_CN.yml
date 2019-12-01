@@ -15,6 +15,11 @@ zh-CN:
     page_gap: "…"
     previous_label: "上一页"
 
+  datetime:
+    distance_in_words: 
+      about_x_hours: This week
+
+
   admin:
     js:
       true: True
@@ -37,7 +42,7 @@ zh-CN:
     loading: "Loading..."
     toggle_navigation: Toggle navigation
     home:
-      name: "Home"
+      name: "主页"
     pagination:
       previous: "&laquo; 上一页"
       next: "下一页 &raquo;"
@@ -53,7 +58,7 @@ zh-CN:
       add_new: "创建"
       chosen: "已选 %{name}"
       chose_all: "选择全部"
-      clear_all: "清楚全部"
+      clear_all: "清除全部"
       up: "向上"
       down: "向下"
       navigation: "导航"
