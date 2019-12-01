@@ -1,5 +1,5 @@
 RailsAdmin.config do |config|
-  config.main_app_name = Proc.new { |controller| ["HelloApp", "控制面板"] }
+  config.main_app_name = Proc.new { |controller| ["国科大选课系统", "控制面板"] }
   config.included_models = ['User','Course','Grade']
   ### Popular gems integration
 
