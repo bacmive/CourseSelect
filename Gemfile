@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rubocop-faker'
+gem 'rails-controller-testing'
 gem 'rails',        '5.1.6'
 gem 'faker'       
 gem 'rails_admin'

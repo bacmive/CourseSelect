@@ -11,7 +11,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template 'homes/index'
     assert_select "a[href=?]", root_path, count: 2
-    assert_select "a[href=?]", rails_admin_path, count: 1
+    assert_select "a[href=?]", rails_admin_path, count: 0
   end
 
 end
