@@ -1,41 +1,36 @@
-<div class="container">
+ <div class="container bg">
 
-
-  <div class="row">
-    <div class="col-md-8" style="background-color: #18BC9C;padding-bottom: 10px;padding-top: 10px">
-      <div style="font-size: 50px; padding-left: 50px">
-        <%= image_tag "profile.png" %>
-        Learning RoR!
+  <div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag "lunbo1.png" %>
       </div>
-
+      <div class="item">
+       <%= image_tag "lunbo2.png" %>
+      </div>
+      <div class="item">
+        <%= image_tag "lunbo3.png" %>
+      </div>
     </div>
-
-    <div class="col-md-4">
-      <h1>在线选课系统样本</h1>
-      <p>这个样本系统是基于国科大研究生课程(高级软件工程)开发的项目,目的是帮助入门者学习RoR(Ruby on Rails),这是适合新学者的入手的第一个项目</p>
-      <p>入门者可以在这个样本系统上增加更多的功能:</p>
-      <ul>
-
-        <li class="text-danger">
-          处理选课冲突、控制选课人数
-        </li>
-        <li class="text-danger">
-          统计选课学分,增加选课的开放、关闭功能
-        </li>
-        <li class="text-danger">
-          自定义管理员后台
-        </li>
-        <li class="text-danger">
-          基于OAuth的授权登陆
-        </li>
-        <li class="text-danger">
-          Excel格式的数据导入
-        </li>
-      </ul>
-
-    </div>
-
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+
+
 
   <hr>
 
@@ -46,30 +41,44 @@
       </div>
     </div>
 
-  </div>
-
-
   <div class="row">
-    <div class="col-md-4">
-      <h2>Bootstrap</h2>
-      <p>Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷. 它由Twitter的设计师Mark
-        Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。</p>
-      <a class="btn btn-info" href="http://www.w3schools.com/bootstrap/">More Info</a>
+    
+    <div class="col-md-4">  
+      <h3>学习天地</h3>
+      <div class="row">
+        <h4 class="col-md-6">Boorstrap</h4>
+        <a class="btn btn-info  col-md-6" href="http://www.w3schools.com/bootstrap/">+更多</a>
+      </div>
+      <div class="row">
+        <h4 class="col-md-6">JavaScript</h4>
+        <a class="btn btn-info  col-md-6" href="http://www.runoob.com/js/js-tutorial.html">+更多</a>
+      </div>
+      <div class="row">
+        <h4 class="col-md-6">Rails Framework</h4>
+        <a class="btn btn-info col-md-6" href="http://guides.ruby-china.org/">+更多</a>
+      </div>
     </div>
 
-    <div class="col-md-4">
-      <h2>Javascript/CSS</h2>
-      <p>JavaScript一种直译式脚本语言,广泛用于客户端的脚本语言,是一种动态类型、弱类型、基于原型的语言，内置支持类型，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。CSS
-        (Cascading Style Sheets)是一种用来表现HTML样式的样式语言,能够真正做到网页表现与内容分离。
-      </p>
-      <a class="btn btn-info" href="http://www.runoob.com/js/js-tutorial.html">More Info</a>
-    </div>
-
-    <div class="col-md-4">
-      <h2>Rails Framework</h2>
-      <p>Rails基于MVC（模型- 视图- 控制器）设计模式。从视图中的Ajax应用，到控制器中的访问请求和反馈，到封装数据库的模型，Rails
-        为你提供一个纯Ruby的开发环境,它基于一种计算机软件语言Ruby,给程序开发人员提供了强大的框架支持。Rails结合了PHP体系的优点（快速开发）和Java体系的优点（程序规整）</p>
-      <a class="btn btn-info" href="http://guides.ruby-china.org/">More Info</a>
+    <div id="home-qlink" class="col-md-4">
+      <div class="panel">
+          <div class="panel-head" style="margin-bottom: 0;">
+            <h3 class="panel-head-title"><span>快速通道</span></h3>
+          </div>
+          <div class="panel-body">
+            <%= image_tag("kslj.png",usemap: "#Map5") %>
+            <map name="Map5">
+              <area shape="rect" coords="1,1,99,161" href="http://service.ucas.ac.cn/" target="_blank" title="校园服务">
+              <area shape="rect" coords="101,1,339,104" href="http://sep.ucas.ac.cn/" target="_blank" title="信息门户">
+              <area shape="rect" coords="345,1,428,155" href="http://job.ucas.ac.cn/" target="_blank" title="就业信息">
+              <area shape="rect" coords="104,111,341,157" href="http://www.cas.cn/" target="_blank" title="中国科学院">
+              <area shape="rect" coords="3,165,97,229" href="http://lib.ucas.ac.cn/" target="_blank" title="图书馆">
+              <area shape="rect" coords="103,165,242,230" href="http://onestop.ucas.edu.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3" target="_blank" title="资源下载">
+              <area shape="rect" coords="247,166,426,230" href="/site/229" target="_blank" title="校长信箱">
+            </map>
+          </div>
+          <!-- // panel-body:end -->
+          <a href="#" target="_blank" class="panel-more-link"><span>+更多</span></a>
+      </div><!-- // panel:end -->
     </div>
   </div>
 </div>
