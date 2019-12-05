@@ -11,7 +11,7 @@
 # column: value
 cheech:
   name: cheech tan
-  email: cheech@gmail.com
+  email: cheech@sohu.com
   password_digest: <%= User.digest('111111') %>
   admin: true
   activated: true
@@ -20,7 +20,7 @@ cheech:
 
 archer:
   name: archer
-  email: archer@gmail.com
+  email: archer@sohu.com
   password_digest: <%= User.digest('111111') %>
   admin: false
   activated: true
@@ -29,7 +29,7 @@ archer:
 
 bacmive:
   name: bacmive
-  email: bacmive@gmail.com
+  email: bacmive@sohu.com
   password_digest: <%= User.digest('111111') %>
   admin: false
   activated: true

@@ -1,12 +1,24 @@
 <% provide(:title, "Forgot password") %>
-  <h1>忘记密码</h1>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+<div class="col-sm-offset-4 col-sm-4">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4><span class="glyphicon glyphicon-lock"></span>找回密码</h4>
+    </div>
+    <div class="panel-body">
+
       <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
-        
-        <%= f.submit "Submit", class: "btn btn-primary" %>
+          <div class="form-group">
+            <%= f.label :email, "输入注册所用邮箱" %>
+            <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+              <%= f.email_field :email, class: 'form-control', placeholder: "输入邮箱" %>
+            </div>
+          </div>
+
+          <%= button_tag(type: "submit", class: "btn btn-success btn-block") do %>
+              <span class="glyphicon glyphicon-zoom-in"></span>找回密码
+          <% end %>
       <% end %>
     </div>
   </div>
+</div>

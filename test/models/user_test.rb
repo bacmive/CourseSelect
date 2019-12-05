@@ -25,4 +25,20 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.user_authenticated?(:remember,'')
   end
 
+  test "create_reset_digest should create the reset_digest and reset_sent_at" do
+    @user.reset_digest  = nil
+    @user.reset_sent_at = nil
+    @user.create_reset_digest
+    assert_not_equal(@user.reset_digest,nil)
+    assert_not_equal(@user.reset_sent_at,nil)
+  end
+
+  test "user_remember should create the remember_token and remember_digest" do
+    @user.remember_token = nil
+    @user.remember_digest= nil
+    @user.user_remember
+    assert_not_equal(@user.remember_token, nil)
+    assert_not_equal(@user.remember_digest,nil)
+  end
+
 end
