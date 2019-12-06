@@ -35,3 +35,22 @@ bacmive:
   activated: true
   activated_at: <%= Time.zone.now %>
   teacher: false
+
+henn:
+  name: henn
+  email: Henn@sohu.com
+  password_digest: <%= User.digest('111111') %>
+  admin: false
+  activated: false
+  activated_at: nil
+  teacher: false
+
+zhang:
+  name: zhang
+  email: zhang@sohu.com
+  password_digest: <%= User.digest('111111') %>
+  admin: false
+  activated: false
+  activated_at: nil
+  teacher: true
+

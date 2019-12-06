@@ -9,3 +9,24 @@
 #
 # two: {}
 # column: value
+yuwen:
+  name: yumen
+  course_type: obligatory
+  course_time: everyday
+  course_week: everyweek
+  class_room: memory
+  credit: youbet
+  teaching_type: teaching
+  exam_type: kaoshi
+  teacher: archer
+
+shuxue:
+  name: shuxue
+  course_type: obligatory
+  course_time: everyday
+  course_week: everyweek
+  class_room: memory
+  credit: youbet
+  teaching_type: teaching
+  exam_type: kaoshi
+  teacher: zhang

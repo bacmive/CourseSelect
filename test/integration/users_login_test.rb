@@ -1,9 +1,27 @@
 class UserLoginTest < ActionDispatch::IntegrationTest
 
+
   def setup
     @user = users(:cheech)
     @user1= users(:bacmive)
     @user2= users(:archer)
+    @user3= users(:henn)
+  end
+
+  test "login with invalid information" do
+    get sessions_login_path
+    assert_template 'sessions/new'
+    post sessions_login_path, params: { session: { email: "", password: "" } }
+    assert_redirected_to root_url
+    assert_not flash.empty?
+  end
+
+  test "should not login without activation" do
+    get sessions_login_path
+    assert_template 'sessions/new'
+    post sessions_login_path, params: { session: { email: @user3.email, password: "111111" } }
+    assert_not flash.empty?
+    assert_redirected_to root_url
   end
 
   test "login with valid information(as for admin)" do
@@ -66,6 +84,17 @@ class UserLoginTest < ActionDispatch::IntegrationTest
   test "login without remembering" do
     log_in_as(@user, remember_me: '0')
     assert_nil cookies['remember_token']
+  end
+
+  test "should not log out when not logged in" do
+    delete sessions_logout_path
+    assert_redirected_to root_url
+  end
+
+  test "should log out when logged in" do
+    log_in_as(@user)
+    delete sessions_logout_path
+    assert_redirected_to root_url
   end
 
 

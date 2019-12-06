@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       else
         message = "账户未激活，请先激活账号再尝试登陆！"
         message += "请检查您的邮箱中的激活邮件"
-        flash[:warning] = message
+        flash = { :warning => message }
       end
     else
       flash= {:danger => '账号或密码错误'}
