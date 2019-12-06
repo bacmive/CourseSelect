@@ -133,8 +133,8 @@ teacher_map.keys.each do |index|
       department: teacher_map[index][:department],
       password: "password",
       password_confirmation: "password",
-      teacher: true
-      activated: true
+      teacher: true,
+      activated: true,
       activated_at: Time.zone.now
   )
 
