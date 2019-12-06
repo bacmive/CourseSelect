@@ -134,6 +134,8 @@ teacher_map.keys.each do |index|
       password: "password",
       password_confirmation: "password",
       teacher: true
+      activated: true
+      activated_at: Time.zone.now
   )
 
   teacher.teaching_courses.create!(
