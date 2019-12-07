@@ -38,11 +38,11 @@ bacmive:
 
 henn:
   name: henn
-  email: Henn@sohu.com
+  email: henn@sohu.com
   password_digest: <%= User.digest('111111') %>
   admin: false
-  activated: false
-  activated_at: nil
+  activated: true
+  activated_at: <%= Time.zone.now %>
   teacher: false
 
 zhang:
@@ -50,7 +50,7 @@ zhang:
   email: zhang@sohu.com
   password_digest: <%= User.digest('111111') %>
   admin: false
-  activated: false
-  activated_at: nil
+  activated: true
+  activated_at: <%= Time.zone.now %>
   teacher: true
 

@@ -38,5 +38,12 @@ class GradesController < ApplicationController
     end
   end
 
+  # Confirms a student logged-in user.
+  def student_logged_in
+    unless student_logged_in?
+      redirect_to root_url, flash: {danger: '请登陆'}
+    end
+  end
+
 end
 
