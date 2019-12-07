@@ -16,9 +16,10 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(course_params)
+    @course = current_user.teaching_courses.build(course_params)
+    #@course = Course.new(course_params)
     if @course.save
-      current_user.teaching_courses<<@course
+      #current_user.teaching_courses<<@course
       redirect_to courses_path, flash: {success: "新课程申请成功"}
     else
       flash[:warning] = "信息填写有误,请重试"
