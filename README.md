@@ -1,26 +1,5 @@
-# README
+选课系统[![Build Status](https://travis-ci.org/bacmive/CourseSelect.svg?branch=master)](https://travis-ci.org/bacmive/CourseSelect)
 ```
 ruby rules all
 ```
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+软件工程项目：国科大选课系统
