@@ -2,4 +2,5 @@
 ```
 ruby rules all
 ```
-软件工程项目：国科大选课系统
+软件工程项目：国科大选课系统   
+[运行demo](my1web.herokuapp.com)
